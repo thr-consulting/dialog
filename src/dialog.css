@@ -1,0 +1,8 @@
+.buttonWrapper {
+    display: flex !important;
+}
+
+.rightButtons {
+    text-align: right;
+    flex-grow: 1;
+}
