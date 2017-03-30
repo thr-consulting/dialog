@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import cn from 'classnames';
 import TPropTypes from 'tproptypes';
+import {Divider, Button, Container} from 'semantic-ui-react';
 import styles from './dialog.css';
 
 /**
@@ -27,28 +27,29 @@ export default class DialogButtons extends Component {
 	};
 
 	render() {
-		const deleteButton = this.props.onRemove ? <button className="ui button" onClick={this.props.onRemove}>Delete</button> : null;
-		const approveButton = this.props.onApprove ? <button className="ui positive right button" onClick={this.props.onApprove}>Save</button> : null;
-		const rejectButton = this.props.onReject ? <button className="ui black deny button" onClick={this.props.onReject}>Cancel</button> : null;
+		const deleteButton = this.props.onRemove ? <Button onClick={this.props.onRemove}>Delete</Button> : null;
+		const approveButton = this.props.onApprove ? <Button positive floated="right" onClick={this.props.onApprove}>Save</Button> : null;
+		const rejectButton = this.props.onReject ? <Button color="black" onClick={this.props.onReject}>Cancel</Button> : null;
+		const Wrapper = this.props.container ? Container : 'div';
 
-		const buttons = this.props.children ? (
-			<div className={cn('ui', {container: this.props.container}, styles.buttonWrapper)}>
+		const buttonContainer = this.props.children ? (
+			<Wrapper className={styles.buttonWrapper}>
 				{this.props.children}
-			</div>
+			</Wrapper>
 		) : (
-			<div className={cn('ui', {container: this.props.container}, styles.buttonWrapper)}>
+			<Wrapper className={styles.buttonWrapper}>
 				{deleteButton}
 				<div className={styles.rightButtons}>
 					{approveButton}
 					{rejectButton}
 				</div>
-			</div>
+			</Wrapper>
 		);
 
 		return (
 			<div>
-				<div className="ui divider"/>
-				{buttons}
+				<Divider/>
+				{buttonContainer}
 			</div>
 		);
 	}

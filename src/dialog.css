@@ -6,3 +6,7 @@
     text-align: right;
     flex-grow: 1;
 }
+
+.dialogSystem {
+    height: 100%;
+}

@@ -1,4 +1,5 @@
 import React, {Children} from 'react';
+import {Segment, Container} from 'semantic-ui-react';
 import TPropTypes from 'tproptypes';
 
 /**
@@ -10,11 +11,11 @@ import TPropTypes from 'tproptypes';
 export default function Dialog(props) {
 	if (Children.count(props.children) === 1) {
 		return (
-			<div className="ui basic segment">
-				<div className="ui container">
+			<Segment basic>
+				<Container>
 					{props.children}
-				</div>
-			</div>
+				</Container>
+			</Segment>
 		);
 	}
 
@@ -25,12 +26,12 @@ export default function Dialog(props) {
 	}
 
 	return (
-		<div className="ui basic segment">
-			<div className="ui container">
+		<Segment basic>
+			<Container>
 				{children}
-			</div>
+			</Container>
 			{buttons}
-		</div>
+		</Segment>
 	);
 }
 

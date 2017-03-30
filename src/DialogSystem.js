@@ -1,8 +1,8 @@
-/* @flow */
 /* eslint-disable react/no-did-update-set-state */
 import React, {Component, PropTypes} from 'react';
 import Dock from 'react-dock';
 import TPropTypes from 'tproptypes';
+import styles from './dialog.css';
 
 const defaultOptions = {
 	position: 'bottom',
@@ -27,7 +27,7 @@ export default class DialogSystem extends Component {
 		closeDialog: PropTypes.func,
 	};
 
-	constructor(props: Object) {
+	constructor(props) {
 		super(props);
 		this.state = {
 			...defaultOptions,
@@ -35,8 +35,6 @@ export default class DialogSystem extends Component {
 			height: 0,
 		};
 	}
-
-	state: Object;
 
 	getChildContext() {
 		return {
@@ -55,8 +53,6 @@ export default class DialogSystem extends Component {
 		}
 	}
 
-	_contentNode: Object;
-
 	/**
 	 * Shows a dialog. This method is available via the React Context.
 	 * @function showDialog
@@ -65,7 +61,7 @@ export default class DialogSystem extends Component {
 	 * @param {Element} component - The Dialog component to display.
 	 * @param {object} options - Custom React Dock props.
 	 */
-	showDialog = (component: Object, options: Object = defaultOptions) => {
+	showDialog = (component, options = defaultOptions) => {
 		this.setState({
 			...options,
 			component,
@@ -83,7 +79,7 @@ export default class DialogSystem extends Component {
 
 	render() {
 		return (
-			<div id="dialogSystem">
+			<div className={styles.dialogSystem}>
 				{this.props.children}
 				<Dock
 					position={this.state.position}

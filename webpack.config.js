@@ -39,11 +39,11 @@ module.exports = {
 				exclude: /node_modules/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					loader: [
+					use: [
 						{
 							loader: 'css-loader',
 							query: {
-								modules:true,
+								modules: true,
 								importLoaders: 1,
 								localIdentName: '[name]_[local]_[hash:base64:5]'
 							}
@@ -62,11 +62,15 @@ module.exports = {
 				postcss: [cssModulesValues]
 			}
 		}),
-		new ExtractTextPlugin('[name].css'),
-	// 	new webpack.optimize.UglifyJsPlugin({
-	// 		compress: {
-	// 			warnings: false,
-	// 		},
-	// 	}),
+		new ExtractTextPlugin({
+			filename: 'index.css',
+			disable: false,
+			allChunks: true,
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false,
+			},
+		}),
 	],
 };
