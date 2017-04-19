@@ -1,5 +1,5 @@
 node_modules
-lib
+dist
 .idea
 npm-debug.log
 yarn.lock
