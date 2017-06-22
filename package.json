@@ -1,6 +1,6 @@
 {
   "name": "dialog",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Dialog Addon that slides up from the bottom of the screen",
   "main": "dist/index.js",
   "scripts": {
