@@ -1,8 +1,8 @@
-var webpack = require('webpack');
-var path = require('path');
-var nodeExternals = require('webpack-node-externals');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var cssModulesValues = require('postcss-modules-values');
+import webpack from 'webpack';
+import path from 'path';
+import nodeExternals from 'webpack-node-externals';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import cssModulesValues from 'postcss-modules-values';
 
 const root = path.resolve(__dirname);
 
@@ -13,9 +13,9 @@ module.exports = {
 	externals: [nodeExternals()],
 	output: {
 		path: path.resolve(root, 'dist'),
-		filename: "index.js",
-		library: "dialog",
-		libraryTarget: "umd"
+		filename: 'index.js',
+		library: 'dialog',
+		libraryTarget: 'umd',
 	},
 	module: {
 		rules: [
@@ -30,10 +30,11 @@ module.exports = {
 							presets: [
 								['es2015', {loose: true, modules: false}],
 								'stage-1',
-								'react'
-							]
-						}
-					}
+								'react',
+								'flow',
+							],
+						},
+					},
 				],
 			},
 			{
@@ -47,22 +48,22 @@ module.exports = {
 							query: {
 								modules: true,
 								importLoaders: 1,
-								localIdentName: '[name]_[local]_[hash:base64:5]'
-							}
+								localIdentName: '[name]_[local]_[hash:base64:5]',
+							},
 						},
 						{
-							loader: 'postcss-loader'
-						}
+							loader: 'postcss-loader',
+						},
 					],
 				}),
-			}
-		]
+			},
+		],
 	},
 	plugins: [
 		new webpack.LoaderOptionsPlugin({
 			options: {
-				postcss: [cssModulesValues]
-			}
+				postcss: [cssModulesValues],
+			},
 		}),
 		new ExtractTextPlugin({
 			filename: 'index.css',
