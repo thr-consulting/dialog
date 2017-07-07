@@ -69,14 +69,14 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
-    "semantic-ui-react": "^0.70.0",
+    "semantic-ui-react": "^0.71.0",
     "style-loader": "^0.18.2",
     "webpack": "^2.2.0",
     "webpack-node-externals": "^1.6.0"
   },
   "peerDependencies": {
     "react": "^15.5.0",
-    "semantic-ui-react": "^0.70.0"
+    "semantic-ui-react": "^0.71.0"
   },
   "dependencies": {
     "debug": "^2.6.8",
@@ -84,7 +84,7 @@
     "prop-types": "^15.5.10",
     "react-dock": "^0.2.4",
     "react-flow-types": "^0.1.1",
-    "tproptypes": "^0.1.10"
+    "tproptypes": "^0.1.11"
   },
   "pre-commit": [
     "lint",
