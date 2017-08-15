@@ -42,6 +42,7 @@
     "class-methods-use-this": "off",
     "max-len": ["error", {"code": 200}],
     "space-before-function-paren": ["error", "never"],
+    "no-return-assign": ["error", "except-parens"],
 
     "react/forbid-prop-types": "error",
     "react/jsx-filename-extension": ["error", {"extensions": [".js", ".jsx"]}],
