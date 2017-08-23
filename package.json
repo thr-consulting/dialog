@@ -86,7 +86,7 @@
     "prop-types": "^15.5.10",
     "react-dock": "^0.2.4",
     "react-flow-types": "^0.1.1",
-    "@thx/tproptypes": "^1.0.0"
+    "@thx/tproptypes": "^1.0.3"
   },
   "greenkeeper": {
     "ignore": [
