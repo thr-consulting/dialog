@@ -33,6 +33,9 @@ module.exports = {
 								'react',
 								'flow',
 							],
+							plugins: [
+								'flow-react-proptypes',
+							],
 						},
 					},
 				],

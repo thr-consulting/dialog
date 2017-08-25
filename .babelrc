@@ -6,6 +6,11 @@
 		"flow"
 	],
 	"env": {
+		"development": {
+			"plugins": [
+				"flow-react-proptypes"
+			]
+		},
 		"test": {
 			"plugins": [
 				"transform-es2015-modules-commonjs"
