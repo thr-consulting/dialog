@@ -1,15 +1,44 @@
 ## Classes
 
 <dl>
+<dt><a href="#Dialog">Dialog</a></dt>
+<dd></dd>
 <dt><a href="#DialogButtons">DialogButtons</a></dt>
 <dd></dd>
 <dt><a href="#DialogSystem">DialogSystem</a></dt>
+<dd></dd>
+<dt><a href="#Dialog">Dialog</a></dt>
 <dd></dd>
 <dt><a href="#DialogButtons">DialogButtons</a></dt>
 <dd></dd>
 <dt><a href="#DialogSystem">DialogSystem</a></dt>
 <dd></dd>
 </dl>
+
+<a name="Dialog"></a>
+
+## Dialog
+**Kind**: global class  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| children | <code>ChildrenArray</code> | Dialog internal components |
+
+
+* [Dialog](#Dialog)
+    * [new Dialog()](#new_Dialog_new)
+    * [new Dialog()](#new_Dialog_new)
+
+<a name="new_Dialog_new"></a>
+
+### new Dialog()
+A container component for custom slide up dialogs.
+
+<a name="new_Dialog_new"></a>
+
+### new Dialog()
+A container component for custom slide up dialogs.
 
 <a name="DialogButtons"></a>
 
@@ -19,7 +48,7 @@
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| children | <code>module:addons/TPropTypes~reactElements</code> |  | Override with custom buttons if needed. |
+| children | <code>ChildrenArray</code> |  | Override with custom buttons if needed. |
 | onApprove | <code>function</code> |  | Called when the dialog is approved. |
 | onReject | <code>function</code> |  | Called when the dialog is canceled. |
 | onRemove | <code>function</code> |  | Called when the delete action is clicked. |
@@ -93,6 +122,31 @@ Shows a dialog. This method is available via the React Context.
 | component | <code>Element</code> | The Dialog component to display. |
 | options | <code>object</code> | Custom React Dock props. |
 
+<a name="Dialog"></a>
+
+## Dialog
+**Kind**: global class  
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| children | <code>ChildrenArray</code> | Dialog internal components |
+
+
+* [Dialog](#Dialog)
+    * [new Dialog()](#new_Dialog_new)
+    * [new Dialog()](#new_Dialog_new)
+
+<a name="new_Dialog_new"></a>
+
+### new Dialog()
+A container component for custom slide up dialogs.
+
+<a name="new_Dialog_new"></a>
+
+### new Dialog()
+A container component for custom slide up dialogs.
+
 <a name="DialogButtons"></a>
 
 ## DialogButtons
@@ -101,7 +155,7 @@ Shows a dialog. This method is available via the React Context.
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| children | <code>module:addons/TPropTypes~reactElements</code> |  | Override with custom buttons if needed. |
+| children | <code>ChildrenArray</code> |  | Override with custom buttons if needed. |
 | onApprove | <code>function</code> |  | Called when the dialog is approved. |
 | onReject | <code>function</code> |  | Called when the dialog is canceled. |
 | onRemove | <code>function</code> |  | Called when the delete action is clicked. |
