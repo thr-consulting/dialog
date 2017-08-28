@@ -1,6 +1,6 @@
 {
   "name": "@thx/dialog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dialog Addon that slides up from the bottom of the screen",
   "main": "dist/index.js",
   "scripts": {
@@ -80,7 +80,7 @@
   },
   "peerDependencies": {
     "react": "^15.5.0",
-    "semantic-ui-react": "^0.71.3"
+    "semantic-ui-react": "^0.72.0"
   },
   "dependencies": {
     "debug": "^3.0.0",
