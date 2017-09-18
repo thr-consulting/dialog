@@ -73,7 +73,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
-    "semantic-ui-react": "^0.72.0",
+    "semantic-ui-react": "^0.73.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.4",
     "webpack-node-externals": "^1.6.0"
